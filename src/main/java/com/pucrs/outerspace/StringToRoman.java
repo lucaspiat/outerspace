@@ -1,5 +1,7 @@
 package com.pucrs.outerspace;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class StringToRoman {
 
     public StringToRoman() {
@@ -7,26 +9,25 @@ public class StringToRoman {
 
     }
 
-    public char convert (String n) {
-        char roman = '\0';
+    public String convertToRoman (String n) {
+        String snob = n.replaceAll("snob", "I");
+        String krok = snob.replaceAll("krok", "V");
+        String squid = krok.replaceAll("squid", "X");
+        String leij = squid.replaceAll("leij", "L");
+        
+        return leij.replaceAll("\\s+", "");
 
-        switch (n) {
-            case "snob representa I":
-                roman = 'I';
-                break;
-            case "krok representa V":
-                roman = 'V';
-                break;
-            case "squid representa X":
-                roman = 'X';
-                break;
-            case "leij representa L":
-                roman = 'L';
+}
 
+    public String removeQuantoVale (String n) {
+        if (n.contains("quanto") && (n.contains("vale"))) {
+            String semqtovale = StringUtils.remove(n, "quanto vale ");
+            String seminterr = semqtovale.replace("?", "");
+            return seminterr;
         }
 
-        return roman;
-       
+        return null;
+
     }
 
 }

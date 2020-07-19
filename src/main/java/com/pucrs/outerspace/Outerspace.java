@@ -20,8 +20,8 @@ import java.util.List;
 
 public class Outerspace {
 
-	// private final StringBuffer sb = new StringBuffer(); //constructs a string buffer with no characters
-	List<String> lines = new ArrayList<String>(4);
+	
+	List<String> lines = new ArrayList<String>(8);
 	
 
 	public Outerspace() {
@@ -66,24 +66,34 @@ public class Outerspace {
 	 * }
 	 */
 
-	// method below returns 4th line only
-	/*
-	 * public String returnLines() throws IOException { String first4 = "";
-	 * 
-	 * for(int i = 0; i < 4; i++) {
-	 * 
-	 * first4 = Files.readAllLines(Paths.get("multiple.txt")).get(i);
-	 * 
-	 * }
-	 * 
-	 * return first4;
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * }
-	 */
+	// method below extracts 2nd word from 8th line
+	
+	 	public String return2ndWord () throws IOException { 
+			String eighth = "";
+	 	
+			eighth = Files.readAllLines(Paths.get("multiple.txt")).get(7);
+			
+       		int pos = eighth.indexOf(" ");
+       		int pos1 = eighth.indexOf(" ", pos+1);
+			String second = eighth.substring(pos+1, pos1);
+			
+	 	
+	 		return second;
+		 }
+		 
+
+	// method below returns 8th line only
+
+		public String returnEighthLine () throws IOException { 
+			String eighth = "";
+	 
+			eighth = Files.readAllLines(Paths.get("multiple.txt")).get(7);
+		 
+		
+	 
+		 	return eighth;
+	 }
+	 
 
 	// method below is bizarre method found on the net, couldn't make it work
 	/*
@@ -94,7 +104,7 @@ public class Outerspace {
 
 	public List<String> returnLines() throws IOException {
 		final Path path = Paths.get("multiple.txt");
-		final int numLines = 4;
+		final int numLines = 13;
 		try (final BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
 			//final List<String> lines = new ArrayList<String>(numLines);
 			int lineNum = 0;
@@ -111,7 +121,7 @@ public class Outerspace {
 		}
 	}
 
-	// spent hours trying to make it work, it didn't
+	// method below a headache, spent hours trying to make it work, it hasn't
 	/*
 	 * public String returnRomanLines() throws IOException { final Path path =
 	 * Paths.get("multiple.txt"); final int numLines = 4; try (final BufferedReader
@@ -132,23 +142,7 @@ public class Outerspace {
 	 * } return null; }
 	 */
 
-	public List<String> returnRomanLines() throws IOException {
-		final Path path = Paths.get("multiple.txt");
-		final int numLines = 4;
-		try (final BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
-			//final List<String> lines = new ArrayList<String>(numLines);
-			int lineNum = 0;
-			String line;
-
-			while ((line = reader.readLine()) != null && lineNum < numLines) {
-				lines.add(line);
-				lineNum++;
-
-			}
-
-			
-			return lines;
-		}
+	
 	
 
 	
@@ -157,7 +151,6 @@ public class Outerspace {
 
 
 	
-	}
 }
 
 	

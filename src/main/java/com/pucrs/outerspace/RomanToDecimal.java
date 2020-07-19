@@ -1,7 +1,12 @@
 package com.pucrs.outerspace;
 
 public class RomanToDecimal {
-    public static void romanToDecimal(java.lang.String romanNumber) {
+
+    public RomanToDecimal() {
+
+    }
+
+    public int convertToDecimal(java.lang.String romanNumber) {
         int decimal = 0;
         int lastNumber = 0;
         String romanNumeral = romanNumber.toUpperCase();
@@ -47,7 +52,7 @@ public class RomanToDecimal {
                     break;
             }
         }
-        System.out.println(decimal);
+        return decimal;
     }
 
     public static int processDecimal(int decimal, int lastNumber, int lastDecimal) {
