@@ -27,11 +27,10 @@ public class OuterspaceApplication {
 		//System.out.println("Values in Roman are : " + teste2.convert(teste.returnLines()));
 
 		System.out.println("--Reading from file: multiple.txt");
-		//line below prints out first 4 read lines
+		//line below prints out read lines
 		System.out.println("--Lines are: ");
 		for (String s : teste.returnLines()) { System.out.println(s); }
-		//System.out.println("Values in Roman are : ");
-		//for (String s : teste2.convert(str)) { System.out.println(s); }
+		
 
 		//line below returns 8th line for test purposes
 		System.out.println("--8th line is: " + teste.returnEighthLine());

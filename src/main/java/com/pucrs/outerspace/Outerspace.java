@@ -140,14 +140,7 @@ public class Outerspace {
 	 * Array.get(frnames, i); i++; return res; }
 	 * 
 	 * } return null; }
-	 */
-
-	
-	
-
-	
-
-        
+	 */       
 
 
 	
