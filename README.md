@@ -1,5 +1,5 @@
 # outerspace
-Projeto PUCRS DELL IT Academy \
+Project PUCRS DELL IT Academy \
 Author: Lucas Sartori Piatnicki \
 \
 My try for resolving the problem 'Guia do Vendedor Interespacial'. \
