@@ -45,6 +45,8 @@ public class OuterspaceApplication {
 		teste4.appendValeToBase();
 		//line below adds decimal to String of output file:
 		teste4.appendDecimalToString();
+
+		
 		
 }  
 
